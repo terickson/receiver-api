@@ -17,7 +17,6 @@ def receiver():
 def show():
     current_app.logger.info("get receiver ")
     receiverInfo = {
-        'id': 1,
         'on': current_app.rx.on,
         'volume': current_app.rx.volume,
         'input': current_app.rx.input,

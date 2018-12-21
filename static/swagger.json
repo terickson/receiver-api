@@ -36,7 +36,7 @@
     }
 },
   "definitions":{
-    "action": {
+    "receiver": {
       "required": [
       ],
       "properties": {
