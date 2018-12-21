@@ -1,0 +1,7 @@
+[Logging]
+level: DEBUG
+moduleName: <<base>>.receiver
+
+[Receiver]
+model: RX-V679
+host: http://<<ip>>:80/YamahaRemoteControl/ctrl

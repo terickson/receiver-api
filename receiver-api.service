@@ -1,0 +1,15 @@
+[Unit]
+Description=manages receiver-api
+After=multi-user.target
+
+[Service]
+Type=idle
+User=<<replace with user to run app as>>
+WorkingDirectory=/usr/apps/receiver-api
+ExecStart=/usr/bin/python /usr/apps/receiver-api/server.py
+Restart=always
+TimeoutStartSec=10
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

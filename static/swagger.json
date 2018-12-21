@@ -1,0 +1,62 @@
+{
+  "swagger": "2.0",
+   "info": {
+     "title": "Receiver API",
+     "description": "API for managing receiver.",
+     "version": "1.0"
+   },
+   "externalDocs":{
+     "description": "Github Repo",
+     "url": ""
+   },
+   "produces": ["application/json"],
+   "paths": {
+    "/receiver/":{
+      "get":
+      {
+        "x-swagger-router-controller":"receiver",
+        "operationId":"show",
+        "tags":["Receiver"],
+        "description":"",
+        "parameters":[
+        ],
+        "responses":{}
+      },
+      "put":
+      {
+        "x-swagger-router-controller":"updateReceiver",
+        "operationId":"update",
+        "tags":["Receiver"],
+        "description":"",
+        "parameters":[
+          {"name":"body","in":"body","description":"","required":true,"schema":{"$ref":"#/definitions/receiver"}}
+        ],
+        "responses":{}
+      }
+    }
+},
+  "definitions":{
+    "action": {
+      "required": [
+      ],
+      "properties": {
+        "on": {
+          "description": "On or Off.",
+          "type": "boolean"
+        },
+        "volume": {
+          "description": "Volume of the receiver.",
+          "type": "string"
+        },
+        "input": {
+          "description": "The type of input to change too.",
+          "type": "string"
+        },
+        "mute": {
+          "description": "Mute or Not.",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
