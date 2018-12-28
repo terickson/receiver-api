@@ -30,13 +30,13 @@ def show():
 def update():
     current_app.logger.info("update receiver")
     receiverInfo = request.json
-    if rx.on != receiverInfo['on']:
-        rx.on = receiverInfo['on']
-    if rx.on:
-        if rx.volume != receiverInfo['volume']:
-            rx.volume = receiverInfo['volume']
-        if rx.input != receiverInfo['input']:
-            rx.input = receiverInfo['input']
-        if rx.mute != receiverInfo['mute']:
-            rx.mute = receiverInfo['mute']
+    if current_app.rx.on != receiverInfo['on']:
+        current_app.rx.on = receiverInfo['on']
+    if current_app.rx.on:
+        if current_app.rx.volume != receiverInfo['volume']:
+            current_app.rx.volume = receiverInfo['volume']
+        if current_app.rx.input != receiverInfo['input']:
+            current_app.rx.input = receiverInfo['input']
+        if current_app.rx.mute != receiverInfo['mute']:
+            current_app.rx.mute = receiverInfo['mute']
     return Response(response=json.dumps(receiverInfo), mimetype='application/json')
